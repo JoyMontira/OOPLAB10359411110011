@@ -13,7 +13,7 @@ class EmployeeDAOImpl implements EmployeeDAO {
 
     //CRUD
     public static final String GET_All_emp = "select * from Employee";
-    public static final String ADD_EMP = "insert into Employee" +
+    public static final String ADD_NEW_EMP = "insert into Employee" +
             "(empID,name,position,salary) values (?,?,?,?)";
     public static final String UPDATE_EMP = "update Employee set" +
             " name = ?,position = ?,salary = ? where empID = ?";
@@ -76,7 +76,7 @@ class EmployeeDAOImpl implements EmployeeDAO {
     public void addEmp(Employee newEmp) {
         try {
             conn = DriverManager.getConnection(url);
-            PreparedStatement ps = conn.prepareStatement(ADD_EMP);
+            PreparedStatement ps = conn.prepareStatement(ADD_NEW_EMP);
             //set parameter
             ps.setInt(1,newEmp.getEmpID());
             ps.setString(2,newEmp.getName());

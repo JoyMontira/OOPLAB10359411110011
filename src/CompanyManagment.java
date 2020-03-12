@@ -10,11 +10,11 @@ public class CompanyManagment {
         //Get all Employee
         displayAllEmployee (dao);
         //add new Employee
-        //addNewEmployee(dao);
+            //addNewEmployee(dao);
         //find Employee by ID
-        findEmployeeByID(dao);
+            //findEmployeeByID(dao);
         //update Employee by ID
-        updateEmployeeByID(dao);
+            //updateEmployeeByID(dao);
         //delete Employee by ID;
         deleteEmployeeByID(dao);
 
@@ -25,7 +25,7 @@ public class CompanyManagment {
     }//main
     private static void deleteEmployeeByID(EmployeeDAO dao) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Delete employee with ID: ");
+        System.out.print("Enter an employee ID that you want to delete: ");
         int id = Integer.parseInt(sc.nextLine().trim());
         dao.deleteEmp(id);
 
